@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-boot-grpc-example
+
+grpc:
+  server:
+    port: 8090
+
+  client:
+    hello-grpc:
+      address: 'static://localhost:8090'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
